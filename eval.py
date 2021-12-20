@@ -132,7 +132,7 @@ if args.resume:
             name = k[7:] # remove 'module.' of dataparallel
             new_state_dict[name]=v
         state_dict = new_state_dict
-    net.load_state_dict(new_state_dict)
+    net.load_state_dict(state_dict)
 
     best_acc = checkpoint['acc']
     start_epoch = checkpoint['epoch']
